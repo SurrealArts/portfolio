@@ -1,13 +1,82 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Memory Forensics Subsystem</title>
+	<style>
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+			background-color: #050505;
+			overflow: hidden;
+		}
+
+		#boot-sequence {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			background: #050505;
+			z-index: 9999;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #0f0;
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 1.2rem;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="boot-sequence">
+		<div id="boot-text">[ LOADING_SYSTEM_MEMORY... - ]</div>
+	</div>
+
+	<div id="app-container">
+		<header id="status-bar">
+			<button id="sidebar-toggle">[&lt;] SYS_NAV</button>
+					<span class="status-item">[ TSHCH-B ]</span>
+					<span class="status-item" id="offset-display">MEM_OFFSET: 0x00000000</span>
+					<span class="status-item highlight">SYS_STATE: ANOMALY_DETECTED</span>
+		</header>
+
+		<aside id="sidebar">
+			<div id="sidebar-content">
+				<div class="tree-root">~/root/pages</div>
+				<ul class="file-tree" id="dynamic-nav">
+					<!-- Dynamically populated by main.js -->
+				</ul>
+
+				<div id="contact-info">
+					<div class="contact-header">[ ESTABLISH_CONNECTION ]</div>
+					<a href="https://github.com/SurrealArts" target="_blank" class="contact-link" rel="noopener noreferrer">&gt; protocol://GITHUB</a>
+					<a href="https://x.com/heiwamakina" target="_blank" class="contact-link" rel="noopener noreferrer">&gt; protocol://TWITTER</a>
+					<a href="https://discord.gg/bpe4xVWG95" target="_blank" class="contact-link" rel="noopener noreferrer">&gt; protocol://DISCORD</a>
+				</div>
+			</div>
+		</aside>
+
+		<main id="memory-view">
+			<canvas id="webgl-canvas"></canvas>
+		</main>
+	</div>
+
+	<div id="content-modal">
+		<div class="modal-header">
+			<span id="modal-title">BUFFER</span>
+			<button id="btn-close-modal">[ X ] CLOSE_BUFFER</button>
+		</div>
+		<div id="modal-body" class="modal-body"></div>
+	</div>
+
+	<div id="tooltips-container"></div>
+
+	<script type="module" src="/src/main.js"></script>
+</body>
+
 </html>

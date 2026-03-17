@@ -29,6 +29,6 @@ jobs:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-domain: 'heiwamakina.nekoweb.org'
           nekoweb-username: 'heiwamakina'
-          directory: 'heiwamakina.nekoweb.org'
+          directory: 'dist'
         #   folder: 'dist'
         #   cleanup: true
