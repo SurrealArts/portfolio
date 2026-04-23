@@ -56,7 +56,19 @@ const pagesConfig = {
                 preview: "Preferred books, plays, music genres and artists"
             }
         ]
-    }
+    },
+    "projects": {
+        displayName: "0xFF_projects.info",
+        zones: [
+            {
+                pos: [0.5, 0.5],
+                radius: 1.2,
+                title: "Discord Lirdle Activity",
+                path: "./pages/projects/01/index.html",
+                preview: "Wordle, but... One Lie Per Line"
+            }
+        ]
+    },
 };
 
 const navList = document.getElementById('dynamic-nav');

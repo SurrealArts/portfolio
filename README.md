@@ -1,3 +1,5 @@
+![version](https://img.shields.io/badge/version-1.1.0-blue)
+
 # Intro
 
 Welcome to my portfolio repo. This is deployed to [my nekoweb](https://heiwamakina.nekoweb.org/index.html).

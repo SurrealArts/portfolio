@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About Me Module</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 20px;
+			color: #0f0;
+			font-family: 'Courier New', Courier, monospace;
+			background: transparent;
+			line-height: 1.6;
+		}
+
+		h1 {
+			border-bottom: 1px dashed #0f0;
+			padding-bottom: 10px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: #5fff5f;
+			text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+		}
+
+		.sys-log {
+			background: rgba(0, 30, 0, 0.6);
+			border-left: 4px solid #0f0;
+			padding: 15px;
+			margin: 20px 0;
+		}
+
+		.highlight {
+			color: #fff;
+			background: #00aa00;
+			padding: 2px 5px;
+		}
+
+		ul {
+			list-style-type: square;
+			padding-left: 20px;
+		}
+
+		::-webkit-scrollbar {
+			width: 8px;
+		}
+
+		::-webkit-scrollbar-track {
+			background: rgba(0, 10, 0, 0.4);
+		}
+
+		::-webkit-scrollbar-thumb {
+			background: #0f0;
+			border-radius: 2px;
+		}
+
+		@media (pointer: fine) {
+			* {
+				cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="%230f0" stroke="%23050505" stroke-width="1"><path d="M4 2v20l6-6 4 8 3-2-4-8h7z"/></svg>') 4 2, auto !important;
+			}
+
+			a,
+			a *,
+			button,
+			button * {
+				cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20" stroke="%235fff5f" stroke-width="1.5" opacity="0.9"/></svg>') 12 12, pointer !important;
+			}
+
+			p,
+			h1,
+			h2,
+			h3,
+			li,
+			span {
+				cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8 4h8M12 4v16M8 20h8" stroke="%230f0" stroke-width="1.5" opacity="0.9"/></svg>') 12 12, text !important;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<h1>[ MODULE: Discord Lirdle Activity ]</h1>
+
+	<div class="sys-log">
+		<p><strong>STATUS:</strong> MEMORY BLOCK DECRYPTED</p>
+		<p><strong>CONTENTS:</strong> Discord Lirdle Activity</p>
+	</div>
+
+	<h3>Implementation</h3>
+
+	<p>
+		A full-stack Discord application bringing the "One Lie Per Line" word game natively to Discord voice channels. This
+		project is structured as a pnpm v10 monorepo and includes the interactive Activity frontend, an Express backend, a
+		Discord.js utility bot, and a persistent SQLite database.
+	</p>
+
+	<p>
+		Github: <a href="https://github.com/SurrealArts/discord-lirdle-activity" target="_blank" rel="noopener noreferrer">https://github.com/SurrealArts/discord-lirdle-activity</a>
+	</p>
+
+	<p>
+		Live demo: <a href="https://discord.com/oauth2/authorize?client_id=1495430267274264628" target="_blank" rel="noopener noreferrer">https://discord.com/oauth2/authorize?client_id=1495430267274264628</a>
+	</p>
+
+	<h3>
+		Tech Stack
+	</h3>
+
+	<ul>
+		<li><strong>Workspace:</strong> pnpm v10, monorepo</li>
+		<li><strong>Frontend/Activity:</strong> HTML, CSS, Vanilla JS, `@discord/embedded-app-sdk`</li>
+		<li><strong>Backend:</strong> Node.js 22, Express</li>
+		<li><strong>Bot:</strong> `discord.js`, `canvas` (libcairo2/libpango native builds)</li>
+		<li><strong>Database:</strong> SQLite, Prisma (`@prisma/adapter-better-sqlite3`)</li>
+		<li><strong>Deployment:</strong> Docker, Docker Compose, Cloudflared</li>
+	</ul>
+
+</body>
+
+</html>
